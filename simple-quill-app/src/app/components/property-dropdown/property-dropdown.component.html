@@ -1,0 +1,8 @@
+<mat-form-field appearance="outline">
+  <mat-label>Select a Property</mat-label>
+  <mat-select [(ngModel)]="selectedProperty" 
+             (openedChange)="onOpenedChange($event)"
+             (selectionChange)="onSelectionChange($event.value)">
+    <mat-option *ngFor="let prop of properties" [value]="prop">{{ prop }}</mat-option>
+  </mat-select>
+</mat-form-field>
